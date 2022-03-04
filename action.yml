@@ -1,11 +1,18 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Test action'
+description: 'Test action'
+author: 'Donovan'
 inputs:
-  milliseconds: # change this
+  aws_s3_bucket:
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    description: Aws bucket
+    default: 'attraqt-io-ssl-certificates'
+  aws_s3_region:
+    required: true
+    description: Aws bucket
+    default: 'eu-west-1'
+  github_token:
+    required: true
+    description: 'Your github token used to commit updates'
 runs:
   using: 'node12'
   main: 'dist/index.js'
